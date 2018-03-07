@@ -1,0 +1,10 @@
+#Hud Created by Civiled
+
+#Available variables: %x% %y% %z% %playercount% %servername% %ping%
+
+#Change message Format
+Format: '(%x%, %y%, %z%)'
+
+#ActionBar or Popup
+Type: Popup
+
