@@ -1,6 +1,0 @@
-name: Hud
-version: "1.0"
-api: ["1.0.0"]
-author: Civiled
-description: A basic Hud plugin for Nukkit
-main: com.rezolt.main
