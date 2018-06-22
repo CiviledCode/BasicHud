@@ -43,11 +43,12 @@ public class main extends PluginBase implements Listener {
                 .replace("%z%", z)
                 .replace("%playercount%", "")
         );
-        if(this.getServer().getPluginManager().getPlugin("EconomyAPI") != null)
-            msg = msg.replaceAll("%money%", String.valueOf(EconomyAPI.getInstance().myMoney(player)));
-        else
-            this.getLogger().info(TextFormat.RED + "You cannot use the %money% var without EconomyAPI!");
-
+        if(msg.contains("%money%")) {
+            if(this.getServer().getPluginManager().getPlugin("EconomyAPI") != null)
+                msg = msg.replaceAll("%money%", String.valueOf(EconomyAPI.getInstance().myMoney(player)));
+            else
+                this.getLogger().info(TextFormat.RED + "You cannot use the %money% var without EconomyAPI!");
+        }
 
         String type = this.getConfig().getString("Type");
 
