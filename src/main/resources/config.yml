@@ -1,6 +1,6 @@
 #Hud Created by Civiled
 
-#Available variables: %x% %y% %z% %playercount% %servername% %ping% %money%
+#Available variables: %x% %y% %z% %playercount% %servername% %ping% %money% %itemhand%
 
 #Change message Format
 Format: '(%x%, %y%, %z%)'

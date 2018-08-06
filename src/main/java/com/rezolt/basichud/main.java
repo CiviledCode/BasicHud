@@ -1,7 +1,5 @@
 package com.rezolt.basichud;
 
-import java.text.DecimalFormat;
-
 import cn.nukkit.Player;
 import cn.nukkit.Server;
 import cn.nukkit.event.EventHandler;
@@ -11,6 +9,8 @@ import cn.nukkit.event.player.PlayerMoveEvent;
 import cn.nukkit.plugin.PluginBase;
 import cn.nukkit.utils.TextFormat;
 import me.onebone.economyapi.EconomyAPI;
+
+import java.text.DecimalFormat;
 
 public class main extends PluginBase implements Listener {
     @Override
@@ -41,7 +41,10 @@ public class main extends PluginBase implements Listener {
                 .replace("%x%", x)
                 .replace("%y%", y)
                 .replace("%z%", z)
-                .replace("%playercount%", "")
+                .replace("%playercount%", "" + this.getServer().getOnlinePlayers().size())
+                .replace("%itemhand%", player.getInventory().getItemInHand().getName())
+                .replace("%ping%", player.getPing() + "ms")
+                .replace("%servername%", this.getServer().getName())
         );
         if(msg.contains("%money%")) {
             if(this.getServer().getPluginManager().getPlugin("EconomyAPI") != null)
